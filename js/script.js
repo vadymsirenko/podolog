@@ -32,45 +32,27 @@ nav?.querySelectorAll("a").forEach((a) =>
     }
   })
 );
-// Kalkulator
-(function () {
-  const money = (v) =>
-    new Intl.NumberFormat("pl-PL", {
-      style: "currency",
-      currency: "PLN",
-      maximumFractionDigits: 0,
-    }).format(v);
-  const rows = Array.from(document.querySelectorAll(".price-table tbody tr"));
-  if (!rows.length) return;
-  const vatEl = document.getElementById("vat");
-  const sumNettoEl = document.getElementById("sumNetto");
-  const sumVatEl = document.getElementById("sumVat");
-  const sumTotalEl = document.getElementById("sumTotal");
-  const sumTotalEl2 = document.getElementById("sumTotal2");
-  function recalc() {
-    let netto = 0;
-    rows.forEach((row) => {
-      const price = Number(row.dataset.price || 0);
-      const qty = Math.max(0, Number(row.querySelector(".qty").value || 0));
-      const line = price * qty;
-      row.querySelector(".line-sum").textContent = money(line).replace(
-        "\u00A0",
-        " "
-      );
-      netto += line;
+
+
+ // FAQ toggle
+  document.querySelectorAll(".faq-item").forEach(item => {
+    item.addEventListener("click", () => {
+      const p = item.querySelector("p");
+      p.style.display = (p.style.display === "block") ? "none" : "block";
     });
-    sumNettoEl.textContent = money(netto).replace("\u00A0", " ");
-    const vat = vatEl && vatEl.checked ? Math.round(netto * 0.23) : 0;
-    sumVatEl.textContent = money(vat).replace("\u00A0", " ");
-    sumTotalEl.textContent = money(netto + vat).replace("\u00A0", " ");
-    sumTotalEl2.textContent = money(netto + vat).replace("\u00A0", " ");
-  }
-  rows.forEach((r) =>
-    r.querySelector(".qty").addEventListener("input", recalc)
-  );
-  if (vatEl) vatEl.addEventListener("change", recalc);
-  recalc();
-})();
+  });
+    // Анімація появи при скролі
+    const sections = document.querySelectorAll("section, footer");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(sec => observer.observe(sec));
+
 // Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach((anchor) =>
   anchor.addEventListener("click", function (e) {
@@ -87,38 +69,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) =>
 // Year
 document.getElementById("y").textContent = new Date().getFullYear();
 
-//poupup
-const popup = document.getElementById("pricing-popup");
-const openBtn = document.getElementById("openPricing");
-const closeBtn = document.querySelector(".popup-close");
-const rows = document.querySelectorAll(".price-table tr");
-const pageContent = document.querySelector(".page-content");
-
-openBtn.addEventListener("click", () => {
-  popup.classList.add("active");
-  pageContent.classList.add("blurred");
-  body.classList.toggle("lock");
-  rows.forEach((row, index) => {
-    setTimeout(() => {
-      row.classList.add("show");
-    }, index * 100);
-  });
-});
-
-function closePopup() {
-  popup.classList.remove("active");
-  pageContent.classList.remove("blurred");
-  body.classList.remove("lock");
-  rows.forEach((row) => row.classList.remove("show"));
-}
-
-closeBtn.addEventListener("click", closePopup);
-
-popup.addEventListener("click", (e) => {
-  if (e.target === popup) {
-    closePopup();
-  }
-});
 
 // Swiper
 const swiper = new Swiper(".swiper", {

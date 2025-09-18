@@ -1,277 +1,198 @@
 <!DOCTYPE html>
-<html lang="uk">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Професійний догляд за стопами</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Arial", sans-serif;
-    }
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profesjonalna pielęgnacja stóp i paznokci</title>
 
-    body {
-      line-height: 1.6;
-      color: #1a1a1a;
-    }
+    <link href="css/header.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/zero-style.css" rel="stylesheet" />
+    <link href="css/section-hero.css" rel="stylesheet" />
+    <link href="css/section-about.css" rel="stylesheet" />
+    <link href="css/section-service.css" rel="stylesheet" />
+    <link href="css/section-steps.css" rel="stylesheet" />
+    <link href="css/section-faq.css" rel="stylesheet" />
+    <link href="css/footer.css" rel="stylesheet" />
+  </head>
+  <body id="top">
+    <!-- HEADER -->
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a href="#top" class="logo" aria-label="Strona główna">
+          <img src="img/logo.png" alt="Logo studia" width="30" height="60" />
+          <h4>Studio Ortopodologii PODO</h4>
+        </a>
 
-    header {
-      background: url('img/hero.png') no-repeat center/cover;
-      padding: 60px 20px;
-      text-align: center;
-      color: #003366;
-    }
+        <nav class="nav" id="nav" role="navigation" aria-label="Główne menu">
+          <a href="#services"><h5 class="header-title">Usługi</h5></a>
+          <a href="#about"><h5 class="header-title">O nas</h5></a>
+          <a href="price.html"><h5 class="header-title">Cennik</h5></a>
+          <a href="#contacts"><h5 class="header-title">Kontakt</h5></a>
+          <span class="header-phone" id="header-phone">
+            <a href="tel:+123123123123"
+              ><h5 class="header-title">+123123123123</h5></a
+            >
+          </span>
+        </nav>
 
-    header h1 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
+        <button
+          class="burger"
+          id="burger"
+          aria-label="Otwórz menu"
+          aria-controls="nav"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
 
-    header p {
-      margin-bottom: 20px;
-      font-size: 1.1rem;
-    }
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <h1>Profesjonalna pielęgnacja stóp i paznokci</h1>
+        <p>Komfortowe i bezpieczne zabiegi dla zdrowia Twoich stóp</p>
+        <a href="#contact" class="btn btn-primary">Umów wizytę online</a>
+        <a href="#contact" class="btn btn-outline">Skontaktuj się</a>
+      </div>
+    </section>
 
-    .green {
-      width: 100px;
-      height: 100px;
-      background: #c6e771;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    .pink {
-      width: 100px;
-      height: 100px;
-      background: #edb1a4;
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="container">
+        <img src="img/podolog.jpg" alt="Zdjęcie specjalisty" />
+        <div>
+          <h2>O mnie</h2>
+          <p>
+            Certyfikowany podolog z wieloletnim doświadczeniem. Pracuję z
+            różnymi problemami stóp i paznokci, stosując nowoczesne metody.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    .btn {
-      display: inline-block;
-      margin: 5px;
-      padding: 12px 25px;
-      border-radius: 25px;
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
-    }
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <h2 style="text-align: center">Usługi</h2>
+        <div class="services">
+          <div class="service">
+            <img
+              class="services-icon"
+              src="img/medical-pedicure.png"
+              alt="Ikona pedicure medycznego"
+            />
+            <h3>Pedicure medyczny</h3>
+          </div>
+          <div class="service">
+            <img
+              class="services-icon"
+              src="img/ingrown-nail.png"
+              alt="Ikona wrastającego paznokcia"
+            />
+            <h3>Usuwanie wrastających paznokci</h3>
+          </div>
+          <div class="service">
+            <img
+              class="services-icon"
+              src="img/callus-cracks.png"
+              alt="Ikona modzeli i pęknięć"
+            />
+            <h3>Usuwanie modzeli i pęknięć</h3>
+          </div>
+          <div class="service">
+            <img
+              class="services-icon"
+              src="img/nail-fungus.png"
+              alt="Ikona grzybicy paznokci"
+            />
+            <h3>Leczenie grzybicy paznokci</h3>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    .btn-primary {
-      background: #2a74db;
-      color: #fff;
-    }
+    <!-- STEPS -->
+    <section class="steps">
+      <div class="container">
+        <h2>Etapy zabiegu</h2>
+        <div class="steps-grid">
+          <div class="step">
+            <h3>01 – Konsultacja i diagnostyka</h3>
+          </div>
+          <div class="step">
+            <h3>02 – Opracowanie paznokci i skóry</h3>
+          </div>
+          <div class="step">
+            <h3>03 – Dezynfekcja i zakończenie</h3>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    .btn-outline {
-      background: #fff;
-      color: #2a74db;
-      border: 1px solid #2a74db;
-    }
+    <!-- FAQ -->
+    <section class="faq">
+      <div class="container">
+        <h2>Najczęstsze pytania</h2>
 
-    .about {
-      padding: 50px 20px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      background: #f8faff;
-    }
+        <div class="faq-item">
+          <h3>Jak przygotować się do wizyty?</h3>
+          <p>
+            Wystarczy przyjść z czystymi stopami, bez lakieru na paznokciach.
+          </p>
+        </div>
 
-    .about img {
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-    }
+        <div class="faq-item">
+          <h3>Jak długo trwa zabieg?</h3>
+          <p>W zależności od problemu – od 30 minut do 1 godziny.</p>
+        </div>
 
-    .about-text {
-      max-width: 500px;
-    }
+        <div class="faq-item">
+          <h3>Czy metody leczenia są bezpieczne?</h3>
+          <p>
+            Tak, wszystkie narzędzia są sterylizowane i spełniają normy higieny.
+          </p>
+        </div>
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-      padding: 40px 20px;
-    }
+        <div class="faq-item">
+          <h3>Jak często warto odwiedzać podologa?</h3>
+          <p>
+            Rekomendowana wizyta co 1–2 miesiące, w zależności od stanu stóp.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    .service {
-      background: #f0f6ff;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-    }
+    <!-- FOOTER -->
+    <footer id="contacts">
+      <div class="container">
+        <div class="footer-inner">
+          <div>
+            <h3>Kontakt</h3>
+            <p>ul. Przykładowa 456, Miasto, 12-345</p>
+            <p>123123123123</p>
+            <p><a href="mailto:info@example.com">info@example.com</a></p>
+          </div>
 
-    .steps {
-      padding: 40px 20px;
-      background: #f8faff;
-      text-align: center;
-    }
+          <div>
+            <h3>Śledź nas</h3>
+            <p>
+              <a href="#">Facebook</a>
+              <a href="#">Instagram</a>
+              <a href="#">Twitter</a>
+            </p>
+          </div>
 
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
+          <div>
+            <h3>Nawigacja</h3>
+            <p><a href="#about">O nas</a></p>
+            <p><a href="#services">Usługi</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-    .step {
-      background: #fff;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .faq {
-      padding: 40px 20px;
-    }
-
-    .faq h2 {
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .faq-item {
-      border-bottom: 1px solid #ddd;
-      padding: 10px 0;
-      cursor: pointer;
-    }
-
-    .faq-item p {
-      display: none;
-      padding-top: 8px;
-      font-size: 0.95rem;
-      color: #444;
-    }
-
-    footer {
-      background: #6c5d7b;
-      color: #fff;
-      padding: 30px 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    footer a {
-      color: #fff;
-      text-decoration: none;
-    }
-
-    @media (max-width: 768px) {
-      .about {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      footer {
-        flex-direction: column;
-        text-align: center;
-      }
-    }
-  </style>
-</head>
-<body>
-
-<header>
-  <h1>Професійний догляд за стопами та нігтями</h1>
-  <p>Комфортні та безпечні процедури для здоров’я ваших ніг</p>
-  <button class="btn btn-primary">Записатися онлайн</button>
-  <button class="btn btn-outline">Зв’язатися</button>
-</header>
-
-<section class="about">
-  <img src="doctor.jpg" alt="Подолог">
-  <div class="about-text">
-    <h2>Про мене</h2>
-    <p>Сертифікований подолог з багаторічним досвідом. Допомагаю зберегти здоров’я ваших ніг за допомогою сучасних методів.</p>
-  </div>
-  <div class="green"></div>
-  <div class="pink"></div>
-</section>
-
-<section class="services">
-  <div class="service">Медичний педикюр</div>
-  <div class="service">Обробка врослого нігтя</div>
-  <div class="service">Видалення мозолів, тріщин</div>
-  <div class="service">Обробка грибка нігтів</div>
-</section>
-
-<section class="steps">
-  <h2>Етапи процедури</h2>
-  <div class="steps-grid">
-    <div class="step">
-      <h3>01 Огляд та діагностика</h3>
-    </div>
-    <div class="step">
-      <h3>02 Обробка нігтів і шкіри</h3>
-    </div>
-    <div class="step">
-      <h3>03 Дезінфекція та завершення</h3>
-    </div>
-    <div class="step">
-      <h3>04 Дезінфекція та завершення</h3>
-    </div>
-  </div>
-</section>
-
-<section class="faq">
-  <h2>Відповіді на запитання</h2>
-  <div class="faq-item">
-    <h3>Як підготуватися до прийому?</h3>
-    <p>Достатньо прийти з чистими ногами без лаку на нігтях.</p>
-  </div>
-  <div class="faq-item">
-    <h3>Скільки триває процедура?</h3>
-    <p>Залежно від проблеми – від 30 хв до 1 години.</p>
-  </div>
-  <div class="faq-item">
-    <h3>Чи безпечні методи лікування?</h3>
-    <p>Так, усі інструменти проходять стерилізацію та відповідають стандартам.</p>
-  </div>
-  <div class="faq-item">
-    <h3>Як часто потрібно відвідувати подолога?</h3>
-    <p>Рекомендується 1 раз на 1–2 місяці залежно від стану ніг.</p>
-  </div>
-</section>
-
-<footer>
-  <div>
-    <h3>Contact</h3>
-    <p>456 Example St., City, State 12345</p>
-    <p>(123) 456-7890</p>
-    <p><a href="mailto:info@example.com">info@example.com</a></p>
-  </div>
-  <div>
-    <h3>Follow Us</h3>
-    <p>
-      <a href="#">Facebook</a> | 
-      <a href="#">Instagram</a> | 
-      <a href="#">Twitter</a>
-    </p>
-  </div>
-  <div>
-    <h3>Home</h3>
-    <p><a href="#">About</a></p>
-    <p><a href="#">Services</a></p>
-  </div>
-</footer>
-
-<script>
-  // FAQ toggle
-  document.querySelectorAll(".faq-item").forEach(item => {
-    item.addEventListener("click", () => {
-      const p = item.querySelector("p");
-      p.style.display = (p.style.display === "block") ? "none" : "block";
-    });
-  });
-</script>
-
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>

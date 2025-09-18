@@ -1,0 +1,18 @@
+.about {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.about img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+}

@@ -1,0 +1,21 @@
+.faq {
+  padding: 40px 20px;
+}
+
+.faq h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.faq-item p {
+  display: none;
+  padding-top: 8px;
+  font-size: 0.95rem;
+  color: #444;
+}
