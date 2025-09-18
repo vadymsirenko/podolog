@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cennik — Studio ortopodologii PODO</title>
+  <style>
+    :root {
+      --bg: #f7f7f8;
+      --card: #ffffff;
+      --ink: #111213;
+      --muted: #61646b;
+      --brand: #0f766e;
+      --ring: rgba(15, 118, 110, 0.25);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--ink);
+      background: radial-gradient(1200px 600px at 10% -10%, #eaf8f6, transparent),
+                  radial-gradient(1000px 500px at 110% 10%, #eef2ff, transparent),
+                  var(--bg);
+    }
+
+    .wrap {
+      max-width: 880px;
+      margin: 6rem auto;
+      padding: 0 1.25rem 4rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2.25rem;
+    }
+    .logo {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      letter-spacing: .18em;
+      text-transform: lowercase;
+      font-weight: 650;
+    }
+    .subtitle {
+      margin-top: .25rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(20, 23, 29, .08);
+      overflow: hidden;
+      border: 1px solid #eef0f4;
+    }
+
+    .toolbar {
+      display: flex;
+      gap: .75rem;
+      align-items: center;
+      padding: 1rem 1rem 0 1rem;
+      flex-wrap: wrap;
+    }
+
+    .search {
+      position: relative;
+      flex: 1 1 260px;
+    }
+    .search input {
+      width: 100%;
+      padding: .8rem 1rem .8rem 2.5rem;
+      border-radius: 12px;
+      border: 1px solid #dfe3ea;
+      outline: none;
+      background: #fff;
+      box-shadow: 0 1px 0 rgba(0,0,0,.02) inset;
+    }
+    .search input:focus { box-shadow: 0 0 0 4px var(--ring); border-color: var(--brand); }
+    .search svg { position: absolute; left: .6rem; top: 50%; transform: translateY(-50%); opacity: .6; }
+
+    .print-btn {
+      appearance: none;
+      border: 1px solid #dfe3ea;
+      background: #fff;
+      padding: .7rem 1rem;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .print-btn:hover { border-color: var(--brand); box-shadow: 0 0 0 4px var(--ring); }
+
+    section { padding: 1rem; }
+
+    h2 {
+      margin: 1.25rem 0 .5rem;
+      font-size: 1.05rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--muted);
+    }
+
+    .list { width: 100%; border-collapse: collapse; }
+    .list tbody tr { border-top: 1px dashed #e7e9ee; }
+    .list th, .list td { padding: .9rem 0; }
+    .list th { text-align: left; font-weight: 700; color: #2a2f36; }
+    .price { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; font-weight: 650; }
+
+    .muted { color: var(--muted); font-weight: 500; }
+
+    footer { text-align: center; color: var(--muted); margin-top: 1.25rem; font-size: .95rem; }
+
+    @media print {
+      body { background: #fff; }
+      .wrap { margin: 0; padding: 0; }
+      .toolbar { display: none; }
+      .card { box-shadow: none; border: none; }
+      a::after { content: "" !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">Cennik</div>
+      <div class="subtitle">Studio ortopodologii <strong>PODO</strong></div>
+    </header>
+
+    <div class="card" id="cennik">
+      <div class="toolbar">
+        <div class="search">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="m21 21-4.3-4.3m1.1-4.1a7 7 0 1 1-14 0 7 7 0 0 1 14 0"/></svg>
+          <input id="q" type="search" placeholder="Szukaj usługi… (np. paznokcia, pięt)" aria-label="Szukaj" />
+        </div>
+        <button class="print-btn" id="printBtn" type="button" title="Drukuj">🖨️ Drukuj</button>
+      </div>
+
+      <section>
+        <h2>Usługa podologiczna</h2>
+        <table class="list" aria-describedby="basic">
+          <tbody id="basic">
+            <tr><th>Konsultacja <span class="muted">(bezpłatna przy zabiegu)</span></th><td class="price">50&nbsp;zł</td></tr>
+            <tr><th>Podstawowy zabieg podologiczny</th><td class="price">150&nbsp;–&nbsp;200&nbsp;zł</td></tr>
+            <tr><th>Obcięcie i opracowanie paznokci zdrowych</th><td class="price">50&nbsp;–&nbsp;100&nbsp;zł</td></tr>
+            <tr><th>Usunięcie odcisku / modzela</th><td class="price">50&nbsp;–&nbsp;100&nbsp;zł</td></tr>
+            <tr><th>Opracowanie hiperkeratozy</th><td class="price">150&nbsp;–&nbsp;200&nbsp;zł</td></tr>
+            <tr><th>Opracowanie stopy cukrzycowej</th><td class="price">200&nbsp;–&nbsp;250&nbsp;zł</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Usługa podologiczna specjalistyczna</h2>
+        <table class="list" aria-describedby="spec">
+          <tbody id="spec">
+            <tr><th>Opracowanie paznokcia zmienionego chorobowo</th><td class="price">100&nbsp;–&nbsp;200&nbsp;zł</td></tr>
+            <tr><th>Opracowanie wrastającego paznokcia</th><td class="price">100&nbsp;–&nbsp;150&nbsp;zł</td></tr>
+            <tr><th>Tamponada, opatrunek przy wrastającym paznokciu</th><td class="price">50&nbsp;–&nbsp;100&nbsp;zł</td></tr>
+            <tr><th>Rekonstrukcja płytki paznokciowej</th><td class="price">100&nbsp;–&nbsp;150&nbsp;zł</td></tr>
+            <tr><th>Opracowanie pękających pięt</th><td class="price">100&nbsp;–&nbsp;200&nbsp;zł</td></tr>
+            <tr><th>Założenie klamry ortonyksycyjnej</th><td class="price">150&nbsp;–&nbsp;250&nbsp;zł</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+
+    <footer>
+      <p>Możliwe są różnice w zależności od stopnia złożoności zabiegu.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Proste filtrowanie w czasie rzeczywistym
+    const input = document.getElementById('q');
+    const tables = Array.from(document.querySelectorAll('tbody'));
+
+    const filter = () => {
+      const q = input.value.trim().toLowerCase();
+      tables.forEach(tb => {
+        let any = false;
+        tb.querySelectorAll('tr').forEach(tr => {
+          const text = tr.innerText.toLowerCase();
+          const match = !q || text.includes(q);
+          tr.style.display = match ? '' : 'none';
+          any = any || match;
+        });
+        // pokaż nagłówek sekcji tylko jeśli są wyniki w tabeli
+        const h = tb.parentElement.previousElementSibling; // h2 element
+        if (h && h.tagName === 'H2') {
+          const visible = Array.from(tb.querySelectorAll('tr')).some(r => r.style.display !== 'none');
+          h.style.display = visible ? '' : 'none';
+        }
+      });
+    };
+
+    input.addEventListener('input', filter);
+
+    // Drukowanie
+    document.getElementById('printBtn').addEventListener('click', () => window.print());
+  </script>
+</body>
+</html>

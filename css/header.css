@@ -1,0 +1,149 @@
+/* Header */
+.site-header {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background: var(--accent);
+  backdrop-filter: saturate(1.5) blur(8px);
+  border-bottom: 1px solid var(--beige);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.site-header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: var(--brand);
+  opacity: 0.1;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 10px;
+}
+.header-title {
+  color: var(--beige);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  font-weight: 800;
+  color: var(--beige);
+}
+.logo img {
+  width: 120px;
+  height: 40px;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.nav a {
+  font-weight: 600;
+  color: var(--muted);
+}
+.nav a:hover {
+  color: var(--ink);
+}
+.header-about {
+  display: none;
+}
+.header-about.hide {
+  display: block;
+}
+.header-phone {
+  font-weight: 700;
+  color: var(--ink);
+}
+.header-phone.hide {
+  display: none;
+}
+.header-contacts {
+  display: none;
+}
+.header-contacts.show {
+  display: block;
+  padding-top: 25px;
+  margin-top: auto;
+  margin-bottom: 10px;
+  border: 1px solid var(--beige);
+  border-radius: 10px;
+  padding: 35px 5px 20px;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+.burger span {
+  width: 26px;
+  height: 2.5px;
+  background: var(--beige);
+  border-radius: 10px;
+  transition: 0.25s;
+}
+
+/* Mobile nav */
+@media (max-width: 860px) {
+  .nav {
+    position: fixed;
+    inset: 0 0 auto auto;
+    width: min(86vw, 380px);
+    height: 100vh;
+    background: var(--card);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.08);
+    transform: translateX(100%);
+    transition: transform 0.35s;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 80px 20px 28px;
+    gap: 18px;
+  }
+  .nav.open {
+    transform: translateX(0);
+    display: flex;
+    gap: 25px;
+  }
+  .nav a {
+    display: inline-block;
+    width: 100%;
+    font-size: 18px;
+    border-bottom: 1px solid var(--beige);
+    padding-bottom: 5px;
+    color: var(--ink);
+  }
+  .nav a:hover {
+    color: var(--beige);
+  }
+  .header-phone {
+    margin-top: 8px;
+  }
+  .burger {
+    display: flex;
+    background: transparent;
+  }
+}
+.burger.active span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+.burger.active span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+
