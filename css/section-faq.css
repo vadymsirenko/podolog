@@ -1,21 +1,38 @@
 .faq {
   padding: 40px 20px;
 }
-
-.faq h2 {
-  margin-bottom: 20px;
-  text-align: center;
+.faq-inner {
+  width: 70%;
+  margin: 0 auto;
+}
+.faq-item {
+  border-bottom: 1px solid var(--btn);
+  padding: 20px 0 5px;
+  cursor: pointer;
 }
 
-.faq-item {
-  border-bottom: 1px solid #ddd;
-  padding: 10px 0;
-  cursor: pointer;
+.faq-item.active {
+  transform: scale(1.02);
+  box-shadow: 0 8px 18px var(--shadow);
+  border-radius: var(--radius);
+  padding: 8px;
+  margin-top: 10px;
+  background: var(--accent);
 }
 
 .faq-item p {
   display: none;
-  padding-top: 8px;
-  font-size: 0.95rem;
-  color: #444;
+  padding: 8px;
+  font-size: 16px;
+  color: var(--muted);
+  background: var(--card);
+  border-radius: var(--radius);
+  margin: 0;
+}
+
+
+@media (max-width: 768px) {
+  .faq-inner {
+    width: 100%;
+  }
 }
