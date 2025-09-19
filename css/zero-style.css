@@ -91,18 +91,19 @@ h6 {
 /*--------------------*/
 :root {
   --bg: #f2f7fc;
-  --card: #ffffff;
+  --card: #f5f9ff;
   --ink: #0c2440;
-  --ink-secondary: #00265c;
-  --ink-tertiary: #104a9e;
-  --text: #14171b;
-  --shadow: rgba(13, 99, 255, 0.15);
-  --line: #ce9772;
   --muted: #5c6b80;
-  --brand-accent: rgba(13, 98, 255, 0.5);
-  --brand: #0d63ff;
-  --brand-ink: #ffffff;
+  /* --ink-secondary: #00265c; */
+  /* --ink-tertiary: #104a9e; */
+  --text-dark: #14171b;
+  --shadow: rgba(0, 0, 0, 0.15);
+  --borders: #5c6b80;
   --accent: #ddecff;
+  
+  --brand-accent: rgba(170, 197, 248, 0.74);
+  --brand: #6692d9;
+  --brand-ink: #ffffff;
   --ring: 0 0 0 4px rgba(13, 99, 255, 0.15);
   --radius: 18px;
   --beige: #ce9772;
