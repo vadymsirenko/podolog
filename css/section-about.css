@@ -3,16 +3,28 @@
   align-items: center;
   gap: 20px;
 }
-.about img {
+.about-img {
   border-radius: 50%;
   width: 120px;
   height: 120px;
   object-fit: cover;
 }
+.about-inner{
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  gap: 30px;
+  width: 70%;
+}
+
+.about-text {
+  max-width: 500px;
+}
 
 @media (max-width: 768px) {
-  .about {
+  .about-inner {
     flex-direction: column;
     text-align: center;
+    width: 100%;
   }
 }

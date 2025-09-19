@@ -23,6 +23,11 @@ h1 {
   text-align: left;
 }
 
+h2 {
+  font-size: clamp(22px, 3.5vw, 28px);
+  line-height: 1.1;
+  margin: 0 0 14px;
+}
 h3 {
   font-size: clamp(16px, 3.5vw, 24px);
   line-height: 1.1;
@@ -53,7 +58,7 @@ h5 {
   box-shadow: inset 0px 0px 5px 0px var(--btn-inset-shadow);
   background: var(--btn);
   color: var(--btn-ink);
-  min-width: 200px;
+  min-width: 230px;
 }
 .btn:hover {
   opacity: 0.9;
@@ -84,9 +89,9 @@ h5 {
   justify-content: start;
 }
 /* Section heading */
-.section {
-  padding: 60px 20px;
-  /* margin: auto; */
+section {
+  padding: 40px 20px;
+  /* margin-bottom: 50px; */
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.8s ease, transform 0.8s ease;
@@ -95,13 +100,6 @@ h5 {
 section.show {
   opacity: 1;
   transform: translateY(0);
-}
-.section h2 {
-  font-size: clamp(24px, 3.5vw, 48px);
-  margin: 0 0 24px;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 600;
 }
 
 .swiper {
