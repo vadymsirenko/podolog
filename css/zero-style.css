@@ -101,14 +101,13 @@ h6 {
   --borders: #5c6b80;
   --accent: #ddecff;
   
-  --brand-accent: rgba(170, 197, 248, 0.74);
-  --brand: #6692d9;
-  --brand-ink: #ffffff;
-  --ring: 0 0 0 4px rgba(13, 99, 255, 0.15);
-  --radius: 18px;
-  --beige: #ce9772;
-  --beige-opacity: rgb(235 162 113 / 42%);
+  --btn-accent: rgba(170, 197, 248, 0.74);
+  --btn: #6692d9;
+  --btn-ink: #ffffff;
+  /* --beige: #ce9772;
+  --beige-opacity: rgb(235 162 113 / 42%); */
   --alert: #d00000;
+  --radius: 15px;
 }
 
 body {

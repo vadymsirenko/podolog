@@ -2,18 +2,18 @@
 const burger = document.getElementById("burger");
 const nav = document.getElementById("nav");
 const body = document.getElementById("top");
-const aboutHeader = document.getElementById("header-about");
+// const aboutHeader = document.getElementById("header-about");
 const phoneHeader = document.getElementById("header-phone");
-const contactsHeader = document.getElementById("header-contacts");
-const sslCert = document.getElementById("ssl-cert");
+// const contactsHeader = document.getElementById("header-contacts");
+// const sslCert = document.getElementById("ssl-cert");
 
 burger?.addEventListener("click", () => {
   burger.classList.toggle("active");
   body.classList.toggle("lock");
-  aboutHeader.classList.toggle("hide");
+  // aboutHeader.classList.toggle("hide");
   phoneHeader.classList.toggle("hide");
-  sslCert.classList.toggle("hide");
-  contactsHeader.classList.toggle("show");
+  // sslCert.classList.toggle("hide");
+  // contactsHeader.classList.toggle("show");
   const open = nav.classList.toggle("open");
   burger.setAttribute("aria-expanded", open ? "true" : "false");
 });
@@ -24,10 +24,10 @@ nav?.querySelectorAll("a").forEach((a) =>
       nav.classList.remove("open");
       burger.classList.remove("active");
       body.classList.remove("lock");
-      aboutHeader.classList.remove("hide");
+      // aboutHeader.classList.remove("hide");
       phoneHeader.classList.remove("hide");
-      sslCert.classList.remove("hide");
-      contactsHeader.classList.remove("show");
+      // sslCert.classList.remove("hide");
+      // contactsHeader.classList.remove("show");
       burger.setAttribute("aria-expanded", "false");
     }
   })
