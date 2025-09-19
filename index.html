@@ -21,17 +21,19 @@
       <div class="container header-inner">
         <a href="#top" class="logo" aria-label="Strona główna">
           <img src="img/logo.png" alt="Logo studia" width="30" height="60" />
-          <h4 class="header-title-logo">Studio Ortopodologii PODO!</h4>
+          <h4 class="header-title-logo">Studio Ortopodologii PODO</h4>
         </a>
 
         <nav class="nav" id="nav" role="navigation" aria-label="Główne menu">
           <a href="#services"><h5 class="header-title">Usługi</h5></a>
-          <a href="#about" class="header-about" id="header-about"><h5 class="header-title">O nas</h5></a>
+          <a href="#about" class="header-about" id="header-about"
+            ><h5 class="header-title">O nas</h5></a
+          >
           <a href="price.html"><h5 class="header-title">Cennik</h5></a>
           <a href="#contacts"><h5 class="header-title">Kontakt</h5></a>
           <span class="header-phone" id="header-phone">
-            <a href="tel:+123123123123"
-              ><h5 class="header-title">+123123123123</h5></a
+            <a href="tel:+48694613047"
+              ><h5 class="header-title">+48 694  613 047</h5></a
             >
           </span>
         </nav>
@@ -54,7 +56,6 @@
         <h1>Profesjonalna pielęgnacja stóp i paznokci</h1>
         <p>Komfortowe i bezpieczne zabiegi dla zdrowia Twoich stóp</p>
         <div class="btn-row">
-
           <a href="#contact" class="btn btn-primary">Umów wizytę online</a>
           <a href="#contact" class="btn btn-outline">Skontaktuj się</a>
         </div>
@@ -65,9 +66,12 @@
     <section class="about" id="about">
       <div class="container">
         <div class="about-inner">
-          <img class="about-img" src="img/podolog.jpg" alt="Zdjęcie specjalisty" />
+          <img
+            class="about-img"
+            src="img/podolog.jpg"
+            alt="Zdjęcie specjalisty"
+          />
           <div class="about-inner-text">
-
             <h2>O mnie</h2>
             <p>
               Certyfikowany podolog z wieloletnim doświadczeniem. Pracuję z
@@ -133,7 +137,7 @@
             <h3>01 – Konsultacja i diagnostyka</h3>
           </div>
           <div class="step">
-             <img
+            <img
               class="step-icon"
               src="img/6.jpg"
               alt="Opracowanie paznokci i skóry"
@@ -161,30 +165,30 @@
     </section>
 
     <!-- FAQ -->
-    <section class="faq">
+    <section class="faq" id="faq">
       <div class="container">
         <h2 style="text-align: center">Najczęstsze pytania</h2>
         <div class="faq-inner">
-
           <div class="faq-item">
             <h3>Jak przygotować się do wizyty?</h3>
             <p>
               Wystarczy przyjść z czystymi stopami, bez lakieru na paznokciach.
             </p>
           </div>
-          
+
           <div class="faq-item">
             <h3>Jak długo trwa zabieg?</h3>
             <p>W zależności od problemu – od 30 minut do 1 godziny.</p>
           </div>
-          
+
           <div class="faq-item">
             <h3>Czy metody leczenia są bezpieczne?</h3>
             <p>
-              Tak, wszystkie narzędzia są sterylizowane i spełniają normy higieny.
+              Tak, wszystkie narzędzia są sterylizowane i spełniają normy
+              higieny.
             </p>
           </div>
-          
+
           <div class="faq-item">
             <h3>Jak często warto odwiedzać podologa?</h3>
             <p>
@@ -201,17 +205,27 @@
         <div class="footer-inner">
           <div>
             <h3>Kontakt</h3>
-            <p>ul. Przykładowa 456, Miasto, 12-345</p>
-            <p>123123123123</p>
-            <p><a href="mailto:info@example.com">info@example.com</a></p>
-          </div>
-
-          <div>
-            <h3>Śledź nas</h3>
-            <p>
-              <a href="#">Facebook</a>
-              <a href="#">Instagram</a>
-              <a href="#">Twitter</a>
+            <p class="contact-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="i">
+                <path
+                  d="M12 2C8.134 2 5 5.134 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.866-3.134-7-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+                />
+              </svg>
+              <a
+                class="contact-item-link"
+                href="https://maps.app.goo.gl/4K4GHzbdVXVMecYa6"
+                target="_blank"
+              >
+                ul. Plac Świętego Józefa 1, 62-800 Kalisz
+              </a>
+            </p>
+            <p class="contact-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="i">
+                <path
+                  d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 .98-.26c1.07.29 2.22.45 3.41.45a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C11.4 21 3 12.6 3 2a1 1 0 0 1 1-1h3.63a1 1 0 0 1 1 1c0 1.19.16 2.34.45 3.41a1 1 0 0 1-.26.98l-2.2 2.2Z"
+                />
+              </svg>
+              <a href="tel:+48694613047">+48 694  613 047</a>
             </p>
           </div>
 
@@ -219,10 +233,21 @@
             <h3>Nawigacja</h3>
             <p><a href="#about">O nas</a></p>
             <p><a href="#services">Usługi</a></p>
+            <p><a href="#faq">Pytania</a></p>
+            <p><a href="price.html">Cennik</a></p>
           </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © <span id="y"></span> Studio Ortopodologii PODO. Wszystkie prawa
+            zastrzeżone.
+          </p>
         </div>
       </div>
     </footer>
+    <div class="scrollTop" id="scrollTop">
+      <a href="#top">Do góry</a>
+    </div>
 
     <script src="js/script.js"></script>
   </body>

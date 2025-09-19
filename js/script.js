@@ -71,44 +71,44 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) =>
 document.getElementById("y").textContent = new Date().getFullYear();
 
 
-// Swiper
-const swiper = new Swiper(".swiper", {
-  // Optional parameters
-  spaceBetween: 30,
-  centeredSlides: true,
-  effect: "fade",
-  centeredSlides: true,
-  loop: true,
-  // navigation: false,
-  noSwipingClass: "swiper-slide",
-  slidesPerView: "auto",
-  spaceBetween: 15,
-  speed: 2500,
-  autoplay: {
-    delay: 11000,
-    disableOnInteraction: false,
-    reverseDirection: false,
-  },
-  keyboard: {
-    enabled: true,
-  },
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+// // Swiper
+// const swiper = new Swiper(".swiper", {
+//   // Optional parameters
+//   spaceBetween: 30,
+//   centeredSlides: true,
+//   effect: "fade",
+//   centeredSlides: true,
+//   loop: true,
+//   // navigation: false,
+//   noSwipingClass: "swiper-slide",
+//   slidesPerView: "auto",
+//   spaceBetween: 15,
+//   speed: 2500,
+//   autoplay: {
+//     delay: 11000,
+//     disableOnInteraction: false,
+//     reverseDirection: false,
+//   },
+//   keyboard: {
+//     enabled: true,
+//   },
+//   // If we need pagination
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
 
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
 
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
-});
+//   // And if we need scrollbar
+//   scrollbar: {
+//     el: ".swiper-scrollbar",
+//   },
+// });
 
 // Form send message to WhatsApp and Messenger
 function getFormData() {
@@ -120,30 +120,6 @@ function getFormData() {
 
   return { name, message };
 }
-
-// WhatsApp send
-document.getElementById("sendWhatsApp").addEventListener("click", function () {
-  const { name, message } = getFormData();
-  const phone = "48600580984"; // <-- WhatsApp number
-
-  const text = `👤 *Imię i nazwisko:* ${name}%0A
-💬 *Wiadomość:* _${message}_`;
-
-  const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(
-    navigator.userAgent
-  );
-  const url = isMobile
-    ? `whatsapp://send?phone=${phone}&text=${text}`
-    : `https://web.whatsapp.com/send?phone=${phone}&text=${text}`;
-
-  const confirmSend = confirm(
-    "✅ Twoja wiadomość została przygotowana.\nKliknij OK, aby otworzyć WhatsApp."
-  );
-  if (confirmSend) {
-    window.open(url, "_blank");
-    document.getElementById("contactForm").reset();
-  }
-});
 
 // Scroll to top
 const scrollTop = document.getElementById("scrollTop");
