@@ -101,7 +101,7 @@ h6 {
   --borders: #5c6b80;
   --accent: #ddecff;
   
-  --btn-accent: rgba(170, 197, 248, 0.74);
+  --btn-inset-shadow: rgba(170, 197, 248, 0.74);
   --btn: #6692d9;
   --btn-ink: #ffffff;
   /* --beige: #ce9772;

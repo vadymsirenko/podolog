@@ -44,16 +44,15 @@ h5 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 16px;
   letter-spacing: 1.1px;
   gap: 10px;
-  padding: 13px 18px;
+  padding: 10px 12px;
   border-radius: 12px;
   font-weight: 700;
-  box-shadow: inset 0px 0px 5px 0px var(--beige);
-  border: 1px solid var(--beige);
-  background: var(--brand);
-  color: var(--brand-ink);
+  box-shadow: inset 0px 0px 5px 0px var(--btn-inset-shadow);
+  background: var(--btn);
+  color: var(--btn-ink);
   min-width: 200px;
 }
 .btn:hover {
@@ -66,8 +65,9 @@ h5 {
 
 .btn:focus-visible {
   outline: none;
-  box-shadow: var(--ring);
+  box-shadow: var(--shadow);
 }
+
 .btn-ghost {
   background: var(--accent);
   color: var(--ink);
@@ -76,6 +76,13 @@ h5 {
   box-shadow: inset 0px 0px 5px 0px var(--brand-accent);
 }
 
+.btn-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+}
 /* Section heading */
 .section {
   padding: 60px 20px;
