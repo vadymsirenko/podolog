@@ -90,8 +90,8 @@ h5 {
 }
 /* Section heading */
 section {
-  padding: 40px 20px;
-  /* margin-bottom: 50px; */
+  padding: 60px 20px;
+  margin-bottom: 50px;
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.8s ease, transform 0.8s ease;

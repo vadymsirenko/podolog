@@ -7,137 +7,30 @@
   <link href="css/zero-style.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/header.css" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #f7f7f8;
-      --card: #ffffff;
-      --ink: #111213;
-      --muted: #61646b;
-      --brand: #0f766e;
-      --ring: rgba(15, 118, 110, 0.25);
-      --radius: 18px;
-    }
-
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0;
-      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      color: var(--ink);
-      background: radial-gradient(1200px 600px at 10% -10%, #eaf8f6, transparent),
-                  radial-gradient(1000px 500px at 110% 10%, #eef2ff, transparent),
-                  var(--bg);
-    }
-
-    .wrap {
-      max-width: 880px;
-      margin: 6rem auto;
-      padding: 0 1.25rem 4rem;
-    }
-
-    .title {
-      text-align: center;
-      margin-bottom: 2.25rem;
-    }
-    .logo {
-      font-size: clamp(2rem, 3.5vw, 3rem);
-      letter-spacing: .18em;
-      text-transform: lowercase;
-      font-weight: 650;
-    }
-    .subtitle {
-      margin-top: .25rem;
-      color: var(--muted);
-      font-weight: 500;
-    }
-
-    .card {
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: 0 10px 30px rgba(20, 23, 29, .08);
-      overflow: hidden;
-      border: 1px solid #eef0f4;
-    }
-
-    .toolbar {
-      display: flex;
-      gap: .75rem;
-      align-items: center;
-      padding: 1rem 1rem 0 1rem;
-      flex-wrap: wrap;
-    }
-
-    .search {
-      position: relative;
-      flex: 1 1 260px;
-    }
-    .search input {
-      width: 100%;
-      padding: .8rem 1rem .8rem 2.5rem;
-      border-radius: 12px;
-      border: 1px solid #dfe3ea;
-      outline: none;
-      background: #fff;
-      box-shadow: 0 1px 0 rgba(0,0,0,.02) inset;
-    }
-    .search input:focus { box-shadow: 0 0 0 4px var(--ring); border-color: var(--brand); }
-    .search svg { position: absolute; left: .6rem; top: 50%; transform: translateY(-50%); opacity: .6; }
-
-    .print-btn {
-      appearance: none;
-      border: 1px solid #dfe3ea;
-      background: #fff;
-      padding: .7rem 1rem;
-      border-radius: 12px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-    .print-btn:hover { border-color: var(--brand); box-shadow: 0 0 0 4px var(--ring); }
-
-    section { padding: 1rem; }
-
-    h2 {
-      margin: 1.25rem 0 .5rem;
-      font-size: 1.05rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      color: var(--muted);
-    }
-
-    .list { width: 100%; border-collapse: collapse; }
-    .list tbody tr { border-top: 1px dashed #e7e9ee; }
-    .list th, .list td { padding: .9rem 0; }
-    .list th { text-align: left; font-weight: 700; color: #2a2f36; }
-    .price { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; font-weight: 650; }
-
-    .muted { color: var(--muted); font-weight: 500; }
-
-    footer { text-align: center; color: var(--muted); margin-top: 1.25rem; font-size: .95rem; }
-
-    @media print {
-      body { background: #fff; }
-      .wrap { margin: 0; padding: 0; }
-      .toolbar { display: none; }
-      .card { box-shadow: none; border: none; }
-      a::after { content: "" !important; }
-    }
-  </style>
+  <link href="css/price.css" rel="stylesheet">
+  <link href="css/footer.css" rel="stylesheet">
 </head>
-<body>
+<body id="price-top">
          <header class="site-header" role="banner">
         <div class="container header-inner">
           <a href="index.html" class="logo" aria-label="Strona główna">
             <img src="img/logo.png" alt="logo" width="30" height="60" />
             <h4>Studio Ortopodologii PODO</h4>
           </a>
+                  <a
+          class="burger-price"
+          aria-label="Na glówną"
+href="index.html"
+        >
+          <span></span><span></span><span></span>
+        </a>
           
         </div>
       </header>
 
   <div class="wrap">
     <div class="title">
-      <div class="logo">Cennik</div>
+      <div class="title-head">Cennik</div>
       <div class="subtitle">Studio ortopodologii <strong>PODO</strong></div>
     </div>
 
@@ -168,6 +61,7 @@
           <tbody id="spec">
             <tr><th>Opracowanie paznokcia zmienionego chorobowo</th><td class="price">100&nbsp;–&nbsp;200&nbsp;zł</td></tr>
             <tr><th>Opracowanie wrastającego paznokcia</th><td class="price">100&nbsp;–&nbsp;150&nbsp;zł</td></tr>
+            <tr><th>Opracowanie onicholizy</th><td class="price">100&nbsp;–&nbsp;150&nbsp;zł</td></tr>
             <tr><th>Tamponada, opatrunek przy wrastającym paznokciu</th><td class="price">50&nbsp;–&nbsp;100&nbsp;zł</td></tr>
             <tr><th>Rekonstrukcja płytki paznokciowej</th><td class="price">100&nbsp;–&nbsp;150&nbsp;zł</td></tr>
             <tr><th>Opracowanie pękających pięt</th><td class="price">100&nbsp;–&nbsp;200&nbsp;zł</td></tr>
@@ -177,40 +71,58 @@
       </section>
     </div>
 
-    <footer>
+    <div class="price-footer">
       <p>Możliwe są różnice w zależności od stopnia złożoności zabiegu.</p>
-    </footer>
+    </div>
   </div>
 
-  <script>
-    // Proste filtrowanie w czasie rzeczywistym
-    const input = document.getElementById('q');
-    const tables = Array.from(document.querySelectorAll('tbody'));
+     <!-- FOOTER -->
+    <footer id="contacts">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-items">
+          <h3>Kontakt</h3>
+          <div class="footer-links">
 
-    const filter = () => {
-      const q = input.value.trim().toLowerCase();
-      tables.forEach(tb => {
-        let any = false;
-        tb.querySelectorAll('tr').forEach(tr => {
-          const text = tr.innerText.toLowerCase();
-          const match = !q || text.includes(q);
-          tr.style.display = match ? '' : 'none';
-          any = any || match;
-        });
-        // pokaż nagłówek sekcji tylko jeśli są wyniki w tabeli
-        const h = tb.parentElement.previousElementSibling; // h2 element
-        if (h && h.tagName === 'H2') {
-          const visible = Array.from(tb.querySelectorAll('tr')).some(r => r.style.display !== 'none');
-          h.style.display = visible ? '' : 'none';
-        }
-      });
-    };
+              <p class="contact-item">
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="i">
+                  <path
+                  d="M12 2C8.134 2 5 5.134 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.866-3.134-7-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"
+                  />
+                </svg>
+                <a
+                class="contact-item-link"
+                href="https://maps.app.goo.gl/4K4GHzbdVXVMecYa6"
+                target="_blank"
+                >
+                ul. Plac Świętego Józefa 1, 62-800 Kalisz
+              </a>
+            </p>
+            <p class="contact-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="i">
+                <path
+                d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 .98-.26c1.07.29 2.22.45 3.41.45a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C11.4 21 3 12.6 3 2a1 1 0 0 1 1-1h3.63a1 1 0 0 1 1 1c0 1.19.16 2.34.45 3.41a1 1 0 0 1-.26.98l-2.2 2.2Z"
+                />
+              </svg>
+              <a href="tel:+48694613047">+48 694 613 047</a>
+            </p>
+          </div>
+          </div>
 
-    input.addEventListener('input', filter);
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © <span id="y"></span> Studio Ortopodologii PODO. Wszystkie prawa
+            zastrzeżone.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <div class="scrollTop" id="scrollTop">
+      <a href="#top">Do góry</a>
+    </div>
 
-    // Drukowanie
-    document.getElementById('printBtn').addEventListener('click', () => window.print());
-  </script>
+  <script src="js/price.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
