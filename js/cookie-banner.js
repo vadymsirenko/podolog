@@ -35,10 +35,10 @@
            Korzystanie z naszej witryny oznacza, że będą one zamieszczane w Państwa urządzeniu. W każdym momencie można dokonać zmiany ustawień Państwa przeglądarki. Jeśli nie akceptujesz opuść tę stronę internetową.
         </p>
       </div>
-      <div class="cb-actions cta-row">
-        <button class="btn-ghost" id="cb-settings">Ustawienia</button>
-        <button class="btn-ghost" id="cb-necessary">Tylko niezbędne</button>
-        <button class="primary btn" id="cb-accept">Akceptuję wszystkie</button>
+      <div class="cb-actions">
+        <button class="cookie-actions btn btn-ghost" id="cb-settings">Ustawienia</button>
+        <button class="cookie-actions btn btn-ghost" id="cb-necessary">Tylko niezbędne</button>
+        <button class="cookie-actions btn" id="cb-accept">Akceptuję wszystkie</button>
       </div>
     `;
     document.body.appendChild(banner);
@@ -69,7 +69,7 @@
       <div class="category"><div><strong>Marketingowe</strong>
            <div style="font-size:0.9rem;color:#555">Spersonalizowane reklamy</div></div>
            <input class="category-input" type="checkbox" id="cbc-marketing" ${c.marketing?'checked':''}></div>
-      <div class="cta-row">
+      <div class="cookie-actions btn-row">
          <button class="cookie-actions btn btn-ghost" id="cancel-settings">Anuluj</button>
          <button class="cookie-actions btn" id="save-settings" >Zapisz wybór</button>
       </div>
