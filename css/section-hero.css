@@ -2,12 +2,14 @@
   background: url("../img/hero.png") no-repeat center/cover;
   position: relative;
   padding: 100px 20px;
+  height: 100vh;
 }
 .hero-inner {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
+  height: 65vh;
   gap: 20px;
 }
 .hero h1 {

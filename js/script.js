@@ -136,12 +136,29 @@ scrollTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// Hide overlay after 3 seconds with fade-out
+// // Hide overlay after 3 seconds with fade-out
+// window.addEventListener("DOMContentLoaded", () => {
+//   setTimeout(() => {
+//     const overlay = document.getElementById("consent-overlay");
+//     overlay.style.opacity = "0";
+//     // Remove from DOM after transition
+//     setTimeout(() => overlay.remove(), 600);
+//   }, 3000);
+// });
+
+// Add class hide after 3 seconds with transition 
+const linkCross = document.getElementById("cross-link");
 window.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
-    const overlay = document.getElementById("consent-overlay");
-    overlay.style.opacity = "0";
-    // Remove from DOM after transition
-    setTimeout(() => overlay.remove(), 600);
-  }, 3000);
+    linkCross.classList.add("hide");
+  }, 4000);
+});
+
+linkCross?.addEventListener("click", () => {
+  linkCross.classList.toggle("hide");
+  linkCross.classList.toggle("show");
+  setTimeout(() => {
+    linkCross.classList.remove("show");
+    linkCross.classList.add("hide");
+  }, 4000);
 });
