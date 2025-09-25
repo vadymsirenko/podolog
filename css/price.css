@@ -42,10 +42,32 @@ body {
   line-height: 1.2;
   text-align: center;
 }
+.subtitle.head{
+  margin-bottom: 20px;
+}
+
 .subtitle {
   margin-top: 0.25rem;
   color: var(--muted);
   font-weight: 500;
+}
+.subtitle-link {
+  margin-top: 1rem;
+  color: var(--btn);
+  font-weight: 500;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--btn);
+  margin-bottom: 5px;
+}
+.subtitle-link:hover {
+  color: var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+.contact-item.subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card {
