@@ -54,19 +54,19 @@ nav?.querySelectorAll("a").forEach((a) =>
 
     sections.forEach(sec => observer.observe(sec));
 
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach((anchor) =>
-  anchor.addEventListener("click", function (e) {
-    const id = this.getAttribute("href");
-    if (id.length > 1) {
-      const el = document.querySelector(id);
-      if (el) {
-        e.preventDefault();
-        window.scrollTo({ top: el.offsetTop - 70, behavior: "smooth" });
-      }
-    }
-  })
-);
+// // Smooth scroll
+// document.querySelectorAll('a[href^="#"]').forEach((anchor) =>
+//   anchor.addEventListener("click", function (e) {
+//     const id = this.getAttribute("href");
+//     if (id.length > 1) {
+//       const el = document.querySelector(id);
+//       if (el) {
+//         e.preventDefault();
+//         window.scrollTo({ top: el.offsetTop - 70, behavior: "smooth" });
+//       }
+//     }
+//   })
+// );
 // Year
 document.getElementById("y").textContent = new Date().getFullYear();
 
