@@ -171,7 +171,11 @@
               class="btn btn-outline"
               >My na mapie
             </a>
-            <a href="price.html" class="btn btn-primary">Cennik</a>
+            <a href="price.html" class="btn btn-primary" onclick="gtag('event', 'click_cennik', {
+              event_callback: function() {
+                document.location = 'price.html';
+              }
+           }); return false;">Cennik</a>
           </div>
         </div>
       </div>
