@@ -1,0 +1,139 @@
+.example-hero {
+  background: linear-gradient(135deg, rgba(230, 242, 255, 0.6), rgba(255, 255, 255, 0.9));
+  padding: 60px 0 40px;
+  text-align: center;
+}
+
+.example-hero h1 {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  margin-top: 90px;
+  margin-bottom: 12px;
+  color: #233d63;
+}
+
+.example-hero p {
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #3c4a57;
+}
+
+.comparison-section {
+  padding: 40px 0;
+}
+
+.comparison-grid {
+  display: grid;
+  gap: 32px;
+}
+
+.comparison-card {
+  display: grid;
+  gap: 24px;
+  align-items: center;
+}
+
+.comparison-card:nth-child(odd) {
+  --order-image: 1;
+  --order-text: 2;
+}
+
+.comparison-card:nth-child(even) {
+  --order-image: 2;
+  --order-text: 1;
+}
+
+.comparison-image {
+  order: var(--order-image);
+}
+
+.comparison-text {
+  order: var(--order-text);
+}
+
+.comparison-image figure {
+  margin: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 32px rgba(35, 61, 99, 0.12);
+}
+
+.comparison-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.comparison-image figcaption {
+  background: rgba(35, 61, 99, 0.85);
+  color: #fff;
+  padding: 12px 16px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.comparison-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+  color: #233d63;
+}
+
+.comparison-text p {
+  margin-bottom: 16px;
+  line-height: 1.7;
+  color: #3c4a57;
+}
+
+.comparison-text ul {
+  padding-left: 20px;
+  color: #3c4a57;
+  line-height: 1.6;
+}
+
+.cta-panel {
+  background: #233d63;
+  color: #fff;
+  margin: 40px 0 60px;
+  padding: 32px 24px;
+  border-radius: 18px;
+  text-align: center;
+}
+
+.cta-panel h3 {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.cta-buttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background: #fff;
+  color: #233d63;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-buttons a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+@media (min-width: 768px) {
+  .comparison-grid {
+    gap: 48px;
+  }
+
+  .comparison-card {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
