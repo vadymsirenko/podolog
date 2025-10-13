@@ -18,6 +18,11 @@
   padding: 14px 10px;
 }
 
+.header-inner.header-price {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 .header-title-logo {
   color: var(--ink);
   font-weight: 600;
