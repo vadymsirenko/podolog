@@ -35,8 +35,8 @@
 }
 
 .comparison-card:nth-child(odd) {
-  --order-image: 1;
-  --order-text: 2;
+  --order-image: 2;
+  --order-text: 1;
 }
 
 .comparison-card:nth-child(even) {
@@ -136,5 +136,14 @@
 
   .comparison-card {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .comparison-card:nth-child(odd) {
+      --order-image: 1;
+  --order-text: 2;
+  }
+
+  .comparison-card:nth-child(even) {
+    --order-image: 2;
+  --order-text: 1;
   }
 }
