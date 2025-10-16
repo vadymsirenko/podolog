@@ -30,7 +30,7 @@ footer.show {
   align-items: flex-start;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
 }
 
 .footer-links.navigation{
