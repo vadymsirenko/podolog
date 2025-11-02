@@ -72,6 +72,7 @@
     <link href="css/section-steps.css" rel="stylesheet" />
     <link href="css/section-faq.css" rel="stylesheet" />
     <link href="css/footer.css" rel="stylesheet" />
+    <link href="css/lws-link.css" rel="stylesheet" />
     <link href="css/cookie-banner.css" rel="stylesheet" />
   </head>
   <body id="top">
@@ -171,11 +172,16 @@
               class="btn btn-outline"
               >My na mapie
             </a>
-            <a href="price.html" class="btn btn-primary" onclick="gtag('event', 'click_cennik', {
+            <a
+              href="price.html"
+              class="btn btn-primary"
+              onclick="gtag('event', 'click_cennik', {
               event_callback: function() {
                 document.location = 'price.html';
               }
-           }); return false;">Cennik</a>
+           }); return false;"
+              >Cennik</a
+            >
           </div>
         </div>
       </div>
@@ -373,6 +379,19 @@
               <p><a class="footer-link" href="/services">Usługi</a></p>
               <p><a class="footer-link" href="/faq">Pytania</a></p>
               <p><a class="footer-link" href="/price.html">Cennik</a></p>
+            </div>
+            <div class="lws-link">
+              <a href="https://sterylizacjanarzendzi.pl/studio/" target="_blank"
+                ><h4 class="lws-link-title">
+                  Projekt i wykonanie strony internetowej przez
+                  <span>LandingWebStudio</span>
+                </h4></a
+              >
+              <img
+                class="lws-link-logo"
+                src="https://sterylizacjanarzendzi.pl/studio/img/lws/logo.png"
+                alt="lending web studio logo"
+              />
             </div>
           </div>
         </div>
